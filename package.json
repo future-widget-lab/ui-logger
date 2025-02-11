@@ -1,6 +1,6 @@
 {
   "name": "@future-widget-lab/logger",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A good enough logger for client-side oriented applications.",
   "license": "MIT",
   "author": "Carlos Lobo",
@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/future-widget-lab/ui-logger.git"
+    "url": "git+https://github.com/future-widget-lab/logger.git"
   },
   "files": [
     "dist",
