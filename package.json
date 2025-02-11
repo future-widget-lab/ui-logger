@@ -1,5 +1,5 @@
 {
-  "name": "@fwl/ui-logger",
+  "name": "@future-widget-lab/ui-logger",
   "version": "0.1.0",
   "description": "A good enough logger for client-side oriented applications.",
   "license": "MIT",

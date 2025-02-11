@@ -1,4 +1,4 @@
-# @fwl/ui-logger
+# @future-widget-lab/ui-logger
 
 This package provides an opinionated but minimal logger built on top of `loglevel`. It allows you to define custom log levels, emojis for different log types, and control debug level logs based on URL search parameters.
 
@@ -13,7 +13,7 @@ This package provides an opinionated but minimal logger built on top of `logleve
 ## Installation
 
 ```bash
-npm install @fwl/ui-logger
+npm install @future-widget-lab/ui-logger
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ npm install @fwl/ui-logger
 ### Basic Example
 
 ```typescript
-import { createLogger } from '@fwl/ui-logger';
+import { createLogger } from '@future-widget-lab/ui-logger';
 
 const logger = createLogger({
   level: 'info',
