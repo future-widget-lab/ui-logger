@@ -13,6 +13,10 @@
     "logging",
     "minimal"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Platekun/ui-logger.git"
+  },
   "files": [
     "dist",
     "src"
