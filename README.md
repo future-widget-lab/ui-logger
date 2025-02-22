@@ -1,6 +1,6 @@
 # @future-widget-lab/logger
 
-This package provides an opinionated but minimal logger built on top of `loglevel`. It allows you to define custom log levels, emojis for different log types, and control debug level logs based on URL search parameters.
+An opinionated but minimal logger built on top of `loglevel`. It allows you to define custom log levels, emojis for different log types, and control debug level logs based on URL search parameters.
 
 ## Features
 
@@ -24,7 +24,7 @@ npm install @future-widget-lab/logger
 import { createLogger } from '@future-widget-lab/logger';
 
 const logger = createLogger({
-  level: 'info',
+	level: 'info'
 });
 
 logger.info({}, 'Application started');
@@ -37,9 +37,9 @@ To enable debug logs for a specific tag, add the corresponding search parameter 
 
 ```typescript
 const logger = createLogger({
-  level: 'debug',
-  allTag: 'all',
-  debugSearchParameterName: 'debug',
+	level: 'debug',
+	allTag: 'all',
+	debugSearchParameterName: 'debug'
 });
 
 logger.debug('auth-module', { user: 'test' }, 'Authentication successful');
@@ -61,12 +61,12 @@ http://example.com/?debug=all
 
 ```typescript
 const logger = createLogger({
-  level: 'info',
-  debugEmoji: '🐛',
-  errorEmoji: '❌',
-  infoEmoji: 'ℹ️',
-  traceEmoji: '🔍',
-  warnEmoji: '⚠️',
+	level: 'info',
+	debugEmoji: '🐛',
+	errorEmoji: '❌',
+	infoEmoji: 'ℹ️',
+	traceEmoji: '🔍',
+	warnEmoji: '⚠️'
 });
 ```
 
@@ -76,10 +76,10 @@ You can perform custom actions after a log message is printed by using the `onAf
 
 ```typescript
 const logger = createLogger({
-  level: 'info',
-  onAfterMessage: ({ level, timestamp, payload, message }) => {
-    sendLogToAnalytics({ level, timestamp, payload, message });
-  },
+	level: 'info',
+	onAfterMessage: ({ level, timestamp, payload, message }) => {
+		sendLogToAnalytics({ level, timestamp, payload, message });
+	}
 });
 ```
 

@@ -1,7 +1,7 @@
 type ShouldDebugOptions = {
-  tag: string;
-  debugSearchParameterName: string;
-  allTag: string;
+	tag: string;
+	debugSearchParameterName: string;
+	allTag: string;
 };
 
 /**
@@ -9,38 +9,38 @@ type ShouldDebugOptions = {
  * Use this helper to determine if the given tag should be logged as a debug log.
  */
 export const shouldDebug = (options: ShouldDebugOptions) => {
-  const { tag, debugSearchParameterName, allTag } = options;
+	const { tag, debugSearchParameterName, allTag } = options;
 
-  if (!window) {
-    return false;
-  }
+	if (!window) {
+		return false;
+	}
 
-  const serializedSearchParameters = window.location.search ?? '';
-  const searchParams = new URLSearchParams(serializedSearchParameters);
+	const serializedSearchParameters = window.location.search ?? '';
+	const searchParams = new URLSearchParams(serializedSearchParameters);
 
-  try {
-    const target = searchParams.get(debugSearchParameterName);
+	try {
+		const target = searchParams.get(debugSearchParameterName);
 
-    if (!target) {
-      return false;
-    }
+		if (!target) {
+			return false;
+		}
 
-    switch (true) {
-      case target === allTag: {
-        return true;
-      }
+		switch (true) {
+			case target === allTag: {
+				return true;
+			}
 
-      case typeof target === 'string': {
-        return target.split(',').includes(tag);
-      }
+			case typeof target === 'string': {
+				return target.split(',').includes(tag);
+			}
 
-      default: {
-        return false;
-      }
-    }
-  } catch {
-    return false;
-  }
+			default: {
+				return false;
+			}
+		}
+	} catch {
+		return false;
+	}
 };
 
 export type ShouldDebug = typeof shouldDebug;
