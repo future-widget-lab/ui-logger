@@ -1,7 +1,7 @@
 import { createLogger } from '../.';
 
 const logger = createLogger({
-	level: 'TRACE'
+  level: 'TRACE'
 });
 
 logger.info({ systemsOnline: true }, 'Booting up system...');
